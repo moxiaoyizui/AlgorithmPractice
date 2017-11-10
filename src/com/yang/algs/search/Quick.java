@@ -1,11 +1,11 @@
 package com.yang.algs.search;
 
 /**
- * 插入排序
+ * 快排
  *
  * @author yang
  */
-public class Insertion {
+public class Quick {
 
     public void base(int[] origin) {
 

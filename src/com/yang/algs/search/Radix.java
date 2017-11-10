@@ -1,11 +1,11 @@
 package com.yang.algs.search;
 
 /**
- * 插入排序
+ * 基数排序
  *
  * @author yang
  */
-public class Insertion {
+public class Radix {
 
     public void base(int[] origin) {
 

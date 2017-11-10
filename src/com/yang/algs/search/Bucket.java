@@ -1,11 +1,11 @@
 package com.yang.algs.search;
 
 /**
- * 插入排序
+ * 桶排序
  *
  * @author yang
  */
-public class Insertion {
+public class Bucket {
 
     public void base(int[] origin) {
 
