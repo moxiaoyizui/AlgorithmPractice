@@ -1,6 +1,7 @@
 package com.yang.main;
 
 import com.yang.algs.search.Bubble;
+import com.yang.algs.search.Insertion;
 
 import java.util.List;
 
@@ -12,7 +13,11 @@ public class Launcher {
 
         long beginTime = System.currentTimeMillis();
 
-        Bubble.enhanced_laststat(origin);
+        //Bubble.base(origin);
+        //Bubble.enhanced_laststat(origin);
+        //Bubble.enhanced_twoways(origin);
+        //Insertion.straight(origin);
+        Insertion.binary(origin);
 
         System.out.println("\n耗时:" + (System.currentTimeMillis() - beginTime) + "ms");
         System.out.println("\n排序后:");
