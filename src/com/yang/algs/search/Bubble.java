@@ -7,49 +7,55 @@ package com.yang.algs.search;
  */
 public class Bubble {
 
-    public static void base(int[] origin) {
+    private int[] arr;
+
+    public Bubble(int[] arr) {
+        this.arr = arr;
+    }
+
+    public void base() {
         System.out.println("基本冒泡排序");
-        int size = origin.length;
+        int size = arr.length;
         for (int i = 0; i < size - 1;i++) {
             for (int j = 0; j < size - i - 1; j++) {
-                if (origin[j] > origin[j + 1]) {
-                    swap(origin, j, j+1);
+                if (arr[j] > arr[j + 1]) {
+                    swap(arr, j, j+1);
                 }
             }
         }
     }
 
-    public static void enhanced_laststat(int[] origin) {
+    public void enhanced_laststat() {
         System.out.println("增强版冒泡排序--完成标记");
-        int size = origin.length;
+        int size = arr.length;
         boolean lastStat = false;
         for (int i = 0; !lastStat && i < size - 1;i++) {
             lastStat = true;
             for (int j = 0; j < size - i - 1; j++) {
-                if (origin[j] > origin[j + 1]) {
+                if (arr[j] > arr[j + 1]) {
                     lastStat = false;
-                    swap(origin, j, j+1);
+                    swap(arr, j, j+1);
                 }
             }
         }
     }
 
-    public static void enhanced_twoways(int[] origin) {
+    public void enhanced_twoways() {
         System.out.println("增强版冒泡排序--双向");
-        int size = origin.length;
+        int size = arr.length;
         int high = size - 1;
         int low = 0;
         while (low < high) {
             for (int i = low; i < high;i++) {
-                if (origin[i] > origin[i+1]) {
-                    swap(origin, i, i+1);
+                if (arr[i] > arr[i+1]) {
+                    swap(arr, i, i+1);
                 }
             }
             high--;
 
             for (int i = high; i > low;i--) {
-                if (origin[i - 1] > origin[i]) {
-                    swap(origin, i - 1, i);
+                if (arr[i - 1] > arr[i]) {
+                    swap(arr, i - 1, i);
                 }
             }
             low++;
