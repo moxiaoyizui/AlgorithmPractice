@@ -1,5 +1,7 @@
 package com.yang.main;
 
+import com.yang.algs.search.Bubble;
+
 import java.util.List;
 
 public class Launcher {
@@ -7,6 +9,12 @@ public class Launcher {
         int[] origin = {1,2,8,1234896,486,456123,456,354,218574,12851,84533,45642313,423185,1260,564045,1546,456,-4231,8108};
         System.out.println("排序前:");
         print(origin);
+
+        long beginTime = System.currentTimeMillis();
+
+        Bubble.enhanced_laststat(origin);
+
+        System.out.println("\n耗时:" + (System.currentTimeMillis() - beginTime) + "ms");
         System.out.println("\n排序后:");
         print(origin);
     }
