@@ -7,7 +7,22 @@ package com.yang.algs.search;
  */
 public class Selection {
 
-    public void base(int[] origin) {
+    public static void base(int[] arr) {
+        for (int i = 0; i < arr.length - 1; i++) {
+            int lowindex = i;
+            for (int j = i+1; j < arr.length;j++) {
+                if (arr[lowindex] > arr[j]) {
+                    lowindex = j;
+                }
+            }
 
+            swap(arr, lowindex, i);
+        }
+    }
+
+    private static void swap(int[] arr, int first, int second) {
+        int temp = arr[first];
+        arr[first] = arr[second];
+        arr[second] = temp;
     }
 }
