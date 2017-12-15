@@ -1,8 +1,6 @@
 package com.yang.main;
 
-import com.yang.algs.search.Bubble;
-import com.yang.algs.search.Insertion;
-import com.yang.algs.search.Selection;
+import com.yang.algs.search.*;
 
 import java.util.List;
 
@@ -20,7 +18,11 @@ public class Launcher {
         //Insertion.straight(origin);
         //Insertion.binary(origin);
 
-        Selection.base(origin);
+        //Selection.base(origin);
+
+        //Quick.base(origin);
+
+        Merge.base(origin);
 
         System.out.println("\n耗时:" + (System.currentTimeMillis() - beginTime) + "ms");
         System.out.println("\n排序后:");
